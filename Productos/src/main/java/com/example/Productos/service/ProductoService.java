@@ -1,7 +1,6 @@
 package com.example.Productos.service;
 
 import org.springframework.stereotype.Service;
-
 import com.example.Productos.model.Producto;
 import com.example.Productos.repository.ProductoRepository;
 
@@ -31,15 +30,13 @@ public class ProductoService {
     public Producto actualizar(Long id, Producto productoActualizado) {
 
         Producto existente = productoRepository.findById(id).orElse(null);
-
         if (existente == null) return null;
 
         existente.setNombre(productoActualizado.getNombre());
         existente.setDescripcion(productoActualizado.getDescripcion());
         existente.setPrecio(productoActualizado.getPrecio());
-        existente.setStock(productoActualizado.getStock());
-        existente.setImagenUrl(productoActualizado.getImagenUrl());
         existente.setCategoria(productoActualizado.getCategoria());
+        existente.setImagen(productoActualizado.getImagen());
 
         return productoRepository.save(existente);
     }
