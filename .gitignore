@@ -1,0 +1,3 @@
+### Ignore local application overrides and env files with secrets
+**/application-local.properties
+.env
