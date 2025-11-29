@@ -1,5 +1,5 @@
 package com.example.Productos.model;
-    
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,16 +12,14 @@ public class Producto {
 
     private String nombre;
 
+    private Integer precio;
+
+    private String categoria;
+
     @Column(length = 500)
     private String descripcion;
 
-    private Integer precio;
-
-    private Integer stock;
-
-    private String imagenUrl;
-
-    private String categoria;
+    private String imagen;
 
     // GETTERS & SETTERS
     public Long getId() {
@@ -38,13 +36,6 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     public Integer getPrecio() {
         return precio;
     }
@@ -52,24 +43,24 @@ public class Producto {
         this.precio = precio;
     }
 
-    public Integer getStock() {
-        return stock;
-    }
-    public void setStock(Integer stock) {
-        this.stock = stock;
-    }
-
-    public String getImagenUrl() {
-        return imagenUrl;
-    }
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
-    }
-
     public String getCategoria() {
         return categoria;
     }
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

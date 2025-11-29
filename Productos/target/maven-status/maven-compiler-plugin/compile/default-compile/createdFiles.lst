@@ -1,5 +1,4 @@
 com\example\Productos\controller\ProductoController.class
-com\example\Productos\service\ProductoService.class
 com\example\Productos\repository\ProductoRepository.class
+com\example\Productos\config\OpenApiConfig.class
 com\example\Productos\model\Producto.class
-com\example\Productos\ProductosApplication.class
